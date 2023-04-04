@@ -4,6 +4,7 @@ from pytube import Playlist
 from pydub import AudioSegment
 import moviepy.editor as mp
 import re
+import time
 
 username = os.getlogin()
 
@@ -24,7 +25,16 @@ print("=========================================================================
 not_downloaded = True
 
 for url in playlist:
-    youtube_title = YouTube(url).title
+    yt = YouTube(url)
+    while True:
+        try:
+            youtube_title = yt.title
+            break
+        except:
+            print("Failed to get name. Retrying...")
+            time.sleep(1)
+            yt = YouTube(url)
+            continue
     for file in os.listdir(download_path):
         if youtube_title+'.mp3' == file:
             print("Track " + youtube_title + " already downloaded, skipped")
