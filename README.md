@@ -10,7 +10,7 @@ The Script requires several external packages:
 
 ### libav
 
-1. Download it from [here (windows 64bit).](http://builds.libav.org/windows/release-gpl/libav-11.3-win64.7z) For other versions, check [here.](http://builds.libav.org/windows/release-gpl/)
+1. Download it from [here (windows 64bit).](https://drive.google.com/file/d/1Ua1hXPnSWHBOLK_uCV4OqyRE7_QFXa8R/view?usp=sharing) For other versions, check [here.](http://builds.libav.org/windows/release-gpl/)
 2. Add the libav ```/bin``` folder to your PATH environment variables
 3. After that, you can use the pydub package
 
